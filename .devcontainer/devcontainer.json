@@ -18,6 +18,12 @@
         "ms-dotnettools.csharp",
         "ms-vscode.powershell"
       ]
+    },
+    "codespaces": {
+      "settings": {
+        "task.allowAutomaticTasksOnStartup": "on",
+        "task.quickOpen.history": 200
+      }
     }
   },
   "containerEnv": {

@@ -2,6 +2,10 @@
 
 Two VS Code tasks are provided for local builds of the LabVIEW Icon Editor, driven by the Integration Engine build tooling. Run them from **Terminal → Run Task…** (or `Ctrl/Cmd+Shift+B`).
 
+## Codespaces compatibility
+- The devcontainer now advertises VS Code task metadata to Codespaces via `customizations.codespaces.settings`, so the task picker remains available in browser-based sessions.
+- If automatic tasks are blocked by the Codespace trust prompt, choose **Manage Automatic Tasks** and allow the workspace to surface the Ollama and build helpers.
+
 ## Using the devcontainer Ollama bench
 - Purpose: Linux devcontainer for dotnet tooling + the Ollama/executor loop; LabVIEW/VIPM builds remain Windows-only on the host.
 - Defaults (devcontainer env): `OLLAMA_HOST=http://host.docker.internal:11435`, `OLLAMA_IMAGE=ghcr.io/svelderrainruiz/ollama-local:cpu-preloaded`, `OLLAMA_MODEL_TAG=llama3-8b-local:latest`; the host Docker socket is mounted and the scripts fail fast if the socket is missing or Docker Desktop is stopped.
